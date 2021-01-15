@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png" width="70" />
+    <!-- <select> -->
+    <!-- <option selected>모든 국가</option> -->
+    <Options />
+    <!-- </select> -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Options from "./components/Options";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Options,
+  },
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style>
