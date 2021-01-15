@@ -38,38 +38,26 @@ export default {
   },
   methods: {
     async fetchData() {
-      console.log("fetchData");
       try {
-        console.log("try");
         const { data } = await date(`${this.date}`);
-        console.log(data);
         let rates = data.rates;
         this.rates = rates;
         this.rate = rates;
-        console.log("this.rates ==>", this.rates);
         let countries = Object.keys(rates);
         countries.unshift("All Countries");
-        console.log("countries ==>", countries);
         this.country = countries;
-        console.log("this.country ==>", this.country);
         this.selected = "All Countries";
-        console.log("this.selected ==>", this.selected);
       } catch (error) {
         return error;
       }
     },
     Select(country) {
-      console.log("Select()");
-      console.log("this.selected ==>", this.selected);
       const rates = this.rates;
-      console.log("let rates ==>", rates);
       if (country === "All Countries") {
-        console.log("if country", country);
         this.rate = rates;
       } else {
         const selectedValue = rates[country];
         this.rate = selectedValue;
-        console.log("else this.rates(selectedValue) ==>", this.rate);
       }
     },
   },
