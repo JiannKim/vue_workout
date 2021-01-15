@@ -15,6 +15,7 @@
       </option>
     </select>
     <br />
+    <br />
     <span>국가: {{ selected }}</span>
     <br />
     <span>최신 환율: {{ this.rate }}</span>
@@ -23,6 +24,7 @@
 
 <script>
 import { latest } from "../api";
+
 export default {
   data() {
     return {

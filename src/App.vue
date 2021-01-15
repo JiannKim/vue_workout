@@ -1,20 +1,20 @@
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" width="70" />
-    <!-- <select> -->
-    <!-- <option selected>모든 국가</option> -->
     <Options />
-    <!-- </select> -->
+    <Date />
   </div>
 </template>
 
 <script>
 import Options from "./components/Options";
+import Date from "./components/Date";
 
 export default {
   name: "App",
   components: {
     Options,
+    Date,
   },
   data() {
     return {};

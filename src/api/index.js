@@ -1,14 +1,17 @@
 import axios from "axios";
 
-// const instance = () => {
-//   const apiURL = axios.create({
-//     baseURL: "https://api.exchangeratesapi.io/"
-//   });
-//   return apiURL;
-// };
+const apiURL = axios.create({
+  baseURL: "https://api.exchangeratesapi.io/",
+});
 
+// 국가별 환율 api 요청
 const latest = () => {
-  return axios.get("https://api.exchangeratesapi.io/latest");
+  return apiURL.get("latest");
 };
 
-export { latest };
+// 날짜별 환율 api 요청
+const date = (date) => {
+  return apiURL.get(date);
+};
+
+export { latest, date };
